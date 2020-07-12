@@ -1,0 +1,12 @@
+We have to create logically correct sentences from the given words.
+- Select language from drop down
+- Words from a sentence in jumbled order are generated
+- The words are displayed in buttons
+- Select the buttons to form a sentence
+- Can reform a sentence to reset the selections
+- Can check the correctness of the sentence after all selections
+- If the sentence is correct, the user can select reform sentence reset the words and try again, supposedly for a different arrangement.
+- If the sentence is incorrect, display a show correct sentences button which displays all correct possible arrangements of the words.
+
+To add:
+We can also display show correct sentences upon submission of the correct answers to show all possible arrangements of words in the sentences.
