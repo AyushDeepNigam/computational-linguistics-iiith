@@ -6,46 +6,29 @@ body {
   padding: 0;
   background: #012943;
 }
-
-#labHead,
 #expHead {
   height: 35px;
   background-color: #0e91e2;
   border-style: solid;
   border-width: 1px;
-  border-color: white;
+  border-color: #fff;
   box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
 }
-
-#labHead a:link,
 #expHead a:link,
-#labHead a:visited,
-#expHead a:visited,
-#labFoot a:link,
-#expFoot a:link,
-#labFoot a:visited,
-#expFoot a:visited {
+#expHead a:visited {
   color: #fff;
   text-decoration: none;
   float: left;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  padding: 0px 25px 0px;
+  padding: 0 25px 0;
 }
-
-#labHead a:focus,
 #expHead a:focus,
-#labHead a:hover,
-#expHead a:hover,
-#labFoot a:focus,
-#expFoot a:focus,
-#labFoot a:hover,
-#expFoot a:hover {
+#expHead a:hover {
   color: #fff;
   background-color: #02568e;
 }
-
 .headingB {
   margin: 0 auto;
   margin-top: 3px;
@@ -53,78 +36,53 @@ body {
   width: 1024px;
   height: 50px;
 }
-
-#expCrumb {
-  line-height: 0px;
+#expnav {
+  line-height: 0;
   color: #3d414c;
-  padding: 15px 0px;
-  letter-spacing: 0px;
+  padding: 15px 0;
+  letter-spacing: 0;
   position: relative;
   margin: 12px auto auto auto;
   width: 1000px;
   font-size: 16px;
 }
-
-#expCrumb a:link,
-#expCrumb a:visited {
+#expnav a:link,
+#expnav a:visited {
   text-decoration: none;
   position: relative;
   color: #fefefe;
 }
-
-#labCrumb {
-  line-height: 0px;
-  color: #3d414c;
-  padding: 15px 0px;
-  letter-spacing: 0px;
-  position: relative;
-  margin: 0px auto auto auto;
-  width: 1000px;
-}
-
-#labCrumb a:link,
-#labCrumb a:visited {
-  color: #fefefe;
-  text-decoration: none;
-  position: relative;
-}
-
 .forSen {
   font-size: 50px;
   font-family: Georgia, "Times New Roman", Times, Serif;
-  font-weight: normal;
+  font-weight: 400;
   text-transform: none;
   color: #3d414c;
   padding: 10px 30px;
   width: 964px;
-  background-color: rgb(227, 242, 252);
+  background-color: #e3f2fc;
 }
 .centerContent {
   width: 964px;
-  background-color: white;
-  box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+  background-color: #fff;
+  box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff,
     12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 15px -4px rgba(0, 0, 0, 0.2);
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
     Arial, sans-serif;
   font-size: 16px;
 }
-
 .centerExp {
   width: 964px;
   margin: 0 auto;
   text-align: center;
+  height: 450px;
 }
-
-nav#labNav ul li,
 nav#expNav ul li {
   float: left;
   list-style: none;
   margin-right: 0.3em;
 }
-
-nav#labNav ul li a:link,
 nav#expNav ul li a:link,
-nav#labNav ul li a:visited,
 nav#expNav ul li a:visited {
   color: #02568e;
   margin-top: -10px;
@@ -139,21 +97,21 @@ nav#expNav ul li a:visited {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
     Arial, sans-serif;
 }
-
-nav#labNav ul li a:hover,
-nav#expNav ul li a:hover,
-nav#labNav ul li a:focus,
-nav#expNav ul li a:focus {
-  color: #ffffff;
+nav#expNav ul li a:focus,
+nav#expNav ul li a:hover {
+  color: #fff;
   background-color: #02568e;
 }
-.textt {
-  font-family: "proxima-nova-extra-condensed-1",
-    "proxima-nova-extra-condensed-2", "Trebuchet MS", "Lucida Grande",
-    "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif;
+.title {
+  font-family: proxima-nova-extra-condensed-1, proxima-nova-extra-condensed-2,
+    "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    Verdana, Arial, sans-serif;
+}
+.dispM {
+  color: #00a;
+  font-size: 16px;
 }
 
-.dispM {
-  color: #0000aa;
-  font-size: 16px;
+.wordButtons{
+  text-align: center;
 }

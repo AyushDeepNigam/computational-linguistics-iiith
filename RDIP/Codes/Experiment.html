@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Virtual Labs</title>
@@ -14,12 +13,9 @@
     <div class="heading" id="expHead">
       <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a>
     </div>
-    <div class="breadcrumb" id="expCrumb">
-      <font color="white"><a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a> &gt; <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a> &gt; <a href="Experiment.html">
-
-          Forming Sentences - 2
-
-        </a></font>
+    <div id="expnav" style="color: white;"><a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a> &gt; 
+    <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a> &gt; <a href="Experiment.html">
+     Forming Sentences - 2 </a>
     </div>
     <div class="forSen">Forming Sentences - 2<br>
       <div class="centerContent">
@@ -57,15 +53,18 @@
               </a></li>
           </ul>
         </nav><br><br><br>
-        <p class="textt" style="font-size: 24px; margin-left: 20px; color: black;">Experiment</p>
+        <p class="title" style="font-size: 24px; margin-left: 20px; color: black;">Experiment</p>
         <div class="centerExp"><br>
-          <select id="language" onmousedown="this.value='';" onchange="jsFunction(this.value);" style="font-size: 16px;">
+          <select id="language" onmousedown="this.value='';" onchange="start(this.value);" style="font-size: 16px;">
             <option value="null">---Select Language---</option>
             <option value="eng">English</option>
             <option value="hin">Hindi</option>
           </select><br><br>
           <p id="dispM" style="display: none;"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b><br><i>(select the buttons in proper order)</i>
           </p>
+          <p id="wordButtons"></p>
+          <div id="btns"></div><br>
+          
         </div>
       </div>
     </div>
