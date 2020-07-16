@@ -126,6 +126,7 @@ var h7 = [
 var randSen=[];
 var check=[];
 var sentences=[];
+var selected=[];
 function start(value) {
   document.getElementById("dispM").style = "display: none";
   document.getElementById("reform").style = "display: none";
@@ -190,7 +191,13 @@ function message(id){
   document.getElementById(id).style = "display: none";
   word = document.getElementById(id).value;
   document.getElementById("createdSentence").innerHTML += word+"&emsp14;";
-
+  //selected[i]=id;
 }
 
-
+function reform(){
+  document.getElementById("wordButtons").innerHTML="";
+  document.getElementById("createdSentence").innerHTML="";
+  document.getElementById("dispMsg").style="display: none";
+  document.getElementById("reform").style="display: none";
+  wordButton();
+}
