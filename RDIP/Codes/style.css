@@ -106,49 +106,49 @@ nav#expNav ul li a:hover {
   font-family: proxima-nova-extra-condensed-1, proxima-nova-extra-condensed-2,
     "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
     Verdana, Arial, sans-serif;
-    font-size: 24px; 
-    margin-left: 20px; 
-    color: black;
+  font-size: 24px;
+  margin-left: 20px;
+  color: black;
 }
 .msg {
   color: #00a;
   font-size: 16px;
 }
 
-.wordButtons{
+.wordButtons {
   text-align: center;
   margin-right: 30px;
 }
 
-.logo{
-  display: block; 
-  margin-left: auto; 
+.logo {
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 
-.language{
+.language {
   font-size: 16px;
 }
 
-.reform{
+.reform {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-.createdSentence{
+.createdSentence {
   font-size: 30px;
 }
 
-.answer1{
-  text-align:center;
-  font-size:30px;
+.answer1 {
+  text-align: center;
+  font-size: 30px;
   display: none;
-  color:#ff0000;
+  color: #ff0000;
 }
-.answer2{
-  text-align:center;
-  font-size:30px;
+.answer2 {
+  text-align: center;
+  font-size: 30px;
   display: none;
-  color:#008600;
+  color: #008600;
 }

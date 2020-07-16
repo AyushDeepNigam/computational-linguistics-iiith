@@ -123,13 +123,13 @@ var h7 = [
   "है वहाँ बड़ी सी एक किताब"
 ];
 
-var randSen=[];
-var check=[];
-var sentences=[];
-var createdSen=[];
-var senLen=0;
+var randSen = [];
+var check = [];
+var sentences = [];
+var createdSen = [];
+var senLen = 0;
 function start(value) {
-  createdSen=[];
+  createdSen = [];
   document.getElementById("dispM").style = "display: none";
   document.getElementById("reform").style = "display: none";
   document.getElementById("dispMsg").style = "display: none";
@@ -137,9 +137,9 @@ function start(value) {
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
   document.getElementById("getAns").style = "display: none";
-  document.getElementById("getAns").innerHTML="Get correct sentence";
-  document.getElementById("wordButtons").innerHTML=" ";
-  document.getElementById("createdSentence").innerHTML=" ";
+  document.getElementById("getAns").innerHTML = "Get correct sentence";
+  document.getElementById("wordButtons").innerHTML = " ";
+  document.getElementById("createdSentence").innerHTML = " ";
   switch (value) {
     case "eng":
       sentences = [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10];
@@ -156,11 +156,9 @@ function start(value) {
   }
 
   var randNum = Math.floor(Math.random() * sentences.length);
-  //alert(randNum);
   chosen = sentences[randNum];
   var word = Math.floor(Math.random() * chosen.length);
   randSen = chosen[word].split(" ");
-  //alert(randSen);
 
   var words = randSen.length,
     temp,
@@ -176,81 +174,77 @@ function start(value) {
   return randSen;
 }
 
-
 function wordButton() {
   for (var i = 0; i < randSen.length; i++) {
-     var button = document.createElement("button");
-     var x = document.createTextNode(randSen[i]);
-     button.appendChild(x);
-     document.getElementById("wordButtons").appendChild(button);
-     button.value = randSen[i];
-     button.setAttribute('id', i);
-     button.setAttribute('class', "wordButtons");
-     button.setAttribute('onclick', "createSen(this.id)");
-     document.getElementById("wordButtons").innerHTML;
-    }
+    var button = document.createElement("button");
+    var x = document.createTextNode(randSen[i]);
+    button.appendChild(x);
+    document.getElementById("wordButtons").appendChild(button);
+    button.value = randSen[i];
+    button.setAttribute("id", i);
+    button.setAttribute("class", "wordButtons");
+    button.setAttribute("onclick", "createSen(this.id)");
+    document.getElementById("wordButtons").innerHTML;
+  }
 }
 
-function createSen(id){
+function createSen(id) {
   document.getElementById("createdSentence").style = "display: block";
   document.getElementById("dispMsg").style = "display: block";
   document.getElementById("reform").style = "display: block";
   document.getElementById(id).style = "display: none";
   word = document.getElementById(id).value;
-  document.getElementById("createdSentence").innerHTML += word+"&emsp14;";
+  document.getElementById("createdSentence").innerHTML += word + "&emsp14;";
   createdSen.push(word);
   senLen++;
-  if(randSen.length == senLen){
-    document.getElementById("check").style="display:block";
+  if (randSen.length == senLen) {
+    document.getElementById("check").style = "display:block";
   }
 }
 
-function reform(){
-  document.getElementById("wordButtons").innerHTML="";
-  document.getElementById("createdSentence").innerHTML="";
-  document.getElementById("dispMsg").style="display: none";
-  document.getElementById("reform").style="display: none";
+function reform() {
+  document.getElementById("wordButtons").innerHTML = "";
+  document.getElementById("createdSentence").innerHTML = "";
+  document.getElementById("dispMsg").style = "display: none";
+  document.getElementById("reform").style = "display: none";
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
   document.getElementById("check").style = "display: none";
-  document.getElementById("getAns").style = "display: none"
-  document.getElementById("getAns").innerHTML="Get correct sentence";
+  document.getElementById("getAns").style = "display: none";
+  document.getElementById("getAns").innerHTML = "Get correct sentence";
   document.getElementById("answers").innerHTML = "";
-  createdSen=[];
+  createdSen = [];
   wordButton();
-  senLen=0;
+  senLen = 0;
 }
 
-function checkSen(){
-    var tf = chosen.includes(createdSen.join(" "));
-    tf = Number(tf);
-    if (tf == 1){
-      document.getElementById("showTrue").style = "display: block";
-    }
-    else if (tf == 0){
-      document.getElementById("showFalse").style = "display: block";
-      document.getElementById("getAns").style = "display: block";
-    }
+function checkSen() {
+  var tf = chosen.includes(createdSen.join(" "));
+  tf = Number(tf);
+  if (tf == 1) {
+    document.getElementById("showTrue").style = "display: block";
+  } else if (tf == 0) {
+    document.getElementById("showFalse").style = "display: block";
+    document.getElementById("getAns").style = "display: block";
+  }
 }
 
-function getCorrect(){
- document.getElementById("answers").innerHTML = chosen.join("<br>");
-btfunc();
+function getCorrect() {
+  document.getElementById("answers").innerHTML = chosen.join("<br>");
+  btfunc();
 }
 
-function btfunc(){
+function btfunc() {
   var btstat = document.getElementById("getAns").innerHTML;
   var gcs = "Get correct sentence";
   var hcs = "Hide the correct sentence";
-  if (btstat == gcs){
-    document.getElementById("getAns").innerHTML="Hide the correct sentence";
-  }
-  else if (btstat==hcs){
-    document.getElementById("getAns").innerHTML="Get answers";
+  if (btstat == gcs) {
+    document.getElementById("getAns").innerHTML = "Hide the correct sentence";
+  } else if (btstat == hcs) {
+    document.getElementById("getAns").innerHTML = "Get answers";
     document.getElementById("answers").innerHTML = "";
-  }
-  else {
-    document.getElementById("getAns").innerHTML="Hide the correct sentence";
+  } else {
+    document.getElementById("getAns").innerHTML = "Hide the correct sentence";
     document.getElementById("answers").innerHTML = chosen.join("<br>");
   }
 }
