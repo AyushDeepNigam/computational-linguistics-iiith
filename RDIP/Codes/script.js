@@ -136,7 +136,8 @@ function start(value) {
   document.getElementById("createdSentence").style = "display: none";
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
-  document.getElementById("getAns").style = "display: none"
+  document.getElementById("getAns").style = "display: none";
+  document.getElementById("getAns").innerHTML="Get correct sentence";
   document.getElementById("wordButtons").innerHTML=" ";
   document.getElementById("createdSentence").innerHTML=" ";
   switch (value) {
@@ -211,9 +212,13 @@ function reform(){
   document.getElementById("reform").style="display: none";
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
+  document.getElementById("check").style = "display: none";
   document.getElementById("getAns").style = "display: none"
+  document.getElementById("getAns").innerHTML="Get correct sentence";
+  document.getElementById("answers").innerHTML = "";
   createdSen=[];
   wordButton();
+  senLen=0;
 }
 
 function checkSen(){
@@ -230,4 +235,22 @@ function checkSen(){
 
 function getCorrect(){
  document.getElementById("answers").innerHTML = chosen.join("<br>");
+btfunc();
+}
+
+function btfunc(){
+  var btstat = document.getElementById("getAns").innerHTML;
+  var gcs = "Get correct sentence";
+  var hcs = "Hide the correct sentence";
+  if (btstat == gcs){
+    document.getElementById("getAns").innerHTML="Hide the correct sentence";
+  }
+  else if (btstat==hcs){
+    document.getElementById("getAns").innerHTML="Get answers";
+    document.getElementById("answers").innerHTML = "";
+  }
+  else {
+    document.getElementById("getAns").innerHTML="Hide the correct sentence";
+    document.getElementById("answers").innerHTML = chosen.join("<br>");
+  }
 }
