@@ -134,6 +134,8 @@ function start(value) {
   document.getElementById("reform").style = "display: none";
   document.getElementById("dispMsg").style = "display: none";
   document.getElementById("createdSentence").style = "display: none";
+  document.getElementById("showTrue").style = "display: none";
+  document.getElementById("showFalse").style = "display: none";
   document.getElementById("wordButtons").innerHTML=" ";
   document.getElementById("createdSentence").innerHTML=" ";
   switch (value) {
@@ -195,7 +197,6 @@ function createSen(id){
   word = document.getElementById(id).value;
   document.getElementById("createdSentence").innerHTML += word+"&emsp14;";
   createdSen.push(word);
-  //i++;
   senLen++;
   if(randSen.length == senLen){
     document.getElementById("check").style="display:block";
@@ -207,11 +208,20 @@ function reform(){
   document.getElementById("createdSentence").innerHTML="";
   document.getElementById("dispMsg").style="display: none";
   document.getElementById("reform").style="display: none";
+  document.getElementById("showTrue").style = "display: none";
+  document.getElementById("showFalse").style = "display: none";
   createdSen=[];
   wordButton();
 }
 
 function checkSen(){
-      
-      alert(createdSen);
+    var tf = chosen.includes(createdSen.join(" "));
+    tf = Number(tf);
+    if (tf == 1){
+      document.getElementById("showTrue").style = "display: block";
+    }
+    else if (tf == 0){
+      document.getElementById("showFalse").style = "display: block";
+    }
 }
+

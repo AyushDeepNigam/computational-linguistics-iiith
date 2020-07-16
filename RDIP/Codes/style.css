@@ -75,7 +75,7 @@ body {
   width: 964px;
   margin: 0 auto;
   text-align: center;
-  height: 450px;
+  height: 650px;
 }
 nav#expNav ul li {
   float: left;
@@ -138,4 +138,17 @@ nav#expNav ul li a:hover {
 
 .createdSentence{
   font-size: 30px;
+}
+
+.answer1{
+  text-align:center;
+  font-size:30px;
+  display: none;
+  color:#ff0000;
+}
+.answer2{
+  text-align:center;
+  font-size:30px;
+  display: none;
+  color:#008600;
 }
