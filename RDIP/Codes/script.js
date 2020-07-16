@@ -130,6 +130,7 @@ var createdSen = [];
 var senLen = 0;
 function start(value) {
   createdSen = [];
+  senLen=0;
   document.getElementById("dispM").style = "display: none";
   document.getElementById("reform").style = "display: none";
   document.getElementById("dispMsg").style = "display: none";
@@ -137,9 +138,11 @@ function start(value) {
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
   document.getElementById("getAns").style = "display: none";
+  document.getElementById("check").style = "display: none";
   document.getElementById("getAns").innerHTML = "Get correct sentence";
   document.getElementById("wordButtons").innerHTML = " ";
   document.getElementById("createdSentence").innerHTML = " ";
+  document.getElementById("answers").innerHTML = " ";
   switch (value) {
     case "eng":
       sentences = [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10];
