@@ -124,22 +124,27 @@ var h7 = [
 ];
 
 var randSen=[];
-
+var check=[];
+var sentences=[];
 function start(value) {
   document.getElementById("dispM").style = "display: none";
+  document.getElementById("reform").style = "display: none";
+  document.getElementById("dispMsg").style = "display: none";
+  document.getElementById("createdSentence").style = "display: none";
   document.getElementById("wordButtons").innerHTML=" ";
+  document.getElementById("createdSentence").innerHTML=" ";
   switch (value) {
     case "eng":
-      var sentences = [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10];
+      sentences = [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10];
       document.getElementById("dispM").style = "display: block";
       break;
     case "hin":
       var sentences = [h1, h2, h3, h4, h5, h6, h7];
       document.getElementById("dispM").style = "display: block";
       break;
-    default:
-      document.getElementById("dispM").style = "display: none";
+    case "null":
       alert("Select Language");
+    default:
       break;
   }
 
@@ -171,10 +176,21 @@ function wordButton() {
      var x = document.createTextNode(randSen[i]);
      button.appendChild(x);
      document.getElementById("wordButtons").appendChild(button);
+     button.value = randSen[i];
+     button.id = i; 
+     button.setAttribute('onclick', "message(this.id)")
      document.getElementById("wordButtons").innerHTML += '&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;';
-  }
+    }
 }
 
+function message(id){
+  document.getElementById("createdSentence").style = "display: block";
+  document.getElementById("dispMsg").style = "display: block";
+  document.getElementById("reform").style = "display: block";
+  document.getElementById(id).style = "display: none";
+  word = document.getElementById(id).value;
+  document.getElementById("createdSentence").innerHTML += word+"&emsp14;";
 
+}
 
 

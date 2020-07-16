@@ -38,13 +38,13 @@ body {
 }
 #expnav {
   line-height: 0;
-  color: #3d414c;
   padding: 15px 0;
   letter-spacing: 0;
   position: relative;
   margin: 12px auto auto auto;
   width: 1000px;
   font-size: 16px;
+  color: white;
 }
 #expnav a:link,
 #expnav a:visited {
@@ -106,12 +106,35 @@ nav#expNav ul li a:hover {
   font-family: proxima-nova-extra-condensed-1, proxima-nova-extra-condensed-2,
     "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
     Verdana, Arial, sans-serif;
+    font-size: 24px; 
+    margin-left: 20px; 
+    color: black;
 }
-.dispM {
+.msg {
   color: #00a;
   font-size: 16px;
 }
 
 .wordButtons{
   text-align: center;
+}
+
+.logo{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.language{
+  font-size: 16px;
+}
+
+.reform{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.createdSentence{
+  font-size: 30px;
 }

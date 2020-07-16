@@ -8,12 +8,12 @@
 </head>
 
 <body>
-  <img src="http://cl-iiith.vlabs.ac.in/images/logo.jpg" style="display: block; margin-left: auto; margin-right: auto;">
+  <img class="logo" src="http://cl-iiith.vlabs.ac.in/images/logo.jpg">
   <div class="headingB">
     <div class="heading" id="expHead">
       <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a>
     </div>
-    <div id="expnav" style="color: white;"><a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a> &gt; 
+    <div id="expnav"><a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a> &gt; 
     <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a> &gt; <a href="Experiment.html">
      Forming Sentences - 2 </a>
     </div>
@@ -53,18 +53,20 @@
               </a></li>
           </ul>
         </nav><br><br><br>
-        <p class="title" style="font-size: 24px; margin-left: 20px; color: black;">Experiment</p>
+        <p class="title">Experiment</p>
         <div class="centerExp"><br>
-          <select id="language" onmousedown="this.value='';" onchange="start(this.value);" style="font-size: 16px;">
+          <select id="language" autocomplete="off" onchange="start(this.value);">
             <option value="null">---Select Language---</option>
             <option value="eng">English</option>
             <option value="hin">Hindi</option>
           </select><br><br>
-          <p id="dispM" style="display: none;"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b><br><i>(select the buttons in proper order)</i>
+          <p class = "msg" id="dispM" style="display: none;"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b><br><i>(select the buttons in proper order)</i>
           </p>
-          <p id="wordButtons"></p>
-          <div id="btns"></div><br>
-          
+          <p id="wordButtons" onclick="message()"></p><br><br>
+          <p id="dispMsg" style="display: none;"><b>Formed Sentence</b><i> (after selecting words): </i><br><br>
+          </p>
+          <b class="createdSentence" id="createdSentence"></b><br><br>
+          <button id = "reform" class="reform" style="display: none;">Re-form the sentence</button>
         </div>
       </div>
     </div>
