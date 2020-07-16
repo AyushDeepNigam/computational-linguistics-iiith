@@ -126,8 +126,10 @@ var h7 = [
 var randSen=[];
 var check=[];
 var sentences=[];
-var selected=[];
+var createdSen=[];
+var senLen=0;
 function start(value) {
+  createdSen=[];
   document.getElementById("dispM").style = "display: none";
   document.getElementById("reform").style = "display: none";
   document.getElementById("dispMsg").style = "display: none";
@@ -178,20 +180,26 @@ function wordButton() {
      button.appendChild(x);
      document.getElementById("wordButtons").appendChild(button);
      button.value = randSen[i];
-     button.id = i; 
-     button.setAttribute('onclick', "message(this.id)")
-     document.getElementById("wordButtons").innerHTML += '&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;';
+     button.setAttribute('id', i);
+     button.setAttribute('class', "wordButtons");
+     button.setAttribute('onclick', "createSen(this.id)");
+     document.getElementById("wordButtons").innerHTML;
     }
 }
 
-function message(id){
+function createSen(id){
   document.getElementById("createdSentence").style = "display: block";
   document.getElementById("dispMsg").style = "display: block";
   document.getElementById("reform").style = "display: block";
   document.getElementById(id).style = "display: none";
   word = document.getElementById(id).value;
   document.getElementById("createdSentence").innerHTML += word+"&emsp14;";
-  //selected[i]=id;
+  createdSen.push(word);
+  //i++;
+  senLen++;
+  if(randSen.length == senLen){
+    document.getElementById("check").style="display:block";
+  }
 }
 
 function reform(){
@@ -199,5 +207,11 @@ function reform(){
   document.getElementById("createdSentence").innerHTML="";
   document.getElementById("dispMsg").style="display: none";
   document.getElementById("reform").style="display: none";
+  createdSen=[];
   wordButton();
+}
+
+function checkSen(){
+      
+      alert(createdSen);
 }
