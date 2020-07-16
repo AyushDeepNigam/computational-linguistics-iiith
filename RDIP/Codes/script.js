@@ -136,6 +136,7 @@ function start(value) {
   document.getElementById("createdSentence").style = "display: none";
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
+  document.getElementById("getAns").style = "display: none"
   document.getElementById("wordButtons").innerHTML=" ";
   document.getElementById("createdSentence").innerHTML=" ";
   switch (value) {
@@ -210,6 +211,7 @@ function reform(){
   document.getElementById("reform").style="display: none";
   document.getElementById("showTrue").style = "display: none";
   document.getElementById("showFalse").style = "display: none";
+  document.getElementById("getAns").style = "display: none"
   createdSen=[];
   wordButton();
 }
@@ -222,6 +224,10 @@ function checkSen(){
     }
     else if (tf == 0){
       document.getElementById("showFalse").style = "display: block";
+      document.getElementById("getAns").style = "display: block";
     }
 }
 
+function getCorrect(){
+ document.getElementById("answers").innerHTML = chosen.join("<br>");
+}
