@@ -1,0 +1,7 @@
+-Select corpus
+-Display a body of text
+-Display a table that takes number of tokens and types as inputs
+-When input is correct "right answer" is displayed and input field turns green, otherwise red and "wrong answer" is displayed
+-On the submission of all correct inputs a continue button is displayed
+-Input number of all the tokens with the same 'root' word to be of the same type
+-When input is correct "right answer" is displayed and input field turns green, otherwise red and "wrong answer" is displayed
