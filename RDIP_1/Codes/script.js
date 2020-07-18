@@ -77,7 +77,7 @@ function check(){
   {
     document.getElementById("result").innerHTML = "Right Answer";
     document.getElementById("result").style = "color: green";
-    document.getElementById("cont").style = "display: block";
+    document.getElementById("cont").style = "display: block";  
   }
   else
   {
@@ -87,7 +87,14 @@ function check(){
   }
 }
 
+function cont() {
+  document.getElementById("continueDiv").style = "display: block";  
+  document.getElementById("sub_but").style = "display: none"; 
+  document.getElementById("result").style = "display: none";
+  document.getElementById("cont").style = "display: none"; 
+}
 function reset(){
+  document.getElementById("continueDiv").style = "display: none";
   document.getElementById("tokensInp").value="";
   document.getElementById("typesInp").value="";
   document.getElementById("tokensInp").style = "background-color: white";

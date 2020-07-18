@@ -65,7 +65,7 @@
           </select><br><br>
           <p class="corpus" id="corpData"></p><br>
           <div id="disp1" style="display: none;">
-          <p class="corpus">Enter the number of tokens and types for the above corpus:</p>
+            <p class="corpus">Enter the number of tokens and types for the above corpus:</p>
             <table cellspacing="0" cellpadding="4" style="text-align: center; margin-left: auto; margin-right: auto;">
               <tbody>
                 <tr>
@@ -80,8 +80,19 @@
               </tbody>
             </table><br>
             <div id="sub_but"><input type="submit" value="Submit" onclick="check()"></div>
-            <h2 id="result" style= "display: block;"></h2>
-            <button id="cont" style="display: none;" onclick="">Continue</button>
+            <h2 id="result" style="display: block;"></h2>
+            <button id="cont" style="display: none;" onclick="cont()">Continue</button>
+          </div>
+          <div id="continueDiv" style="display: none;">
+            Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.
+            <br><br>
+            #new types: <br>
+                  <input type="text" id="rootInp" size="4">
+                <br><br>
+                <input type="submit" value="Submit">
+              </form>
+            <br>
+            <div id="result2"></div>
           </div>
         </div>
       </div>
