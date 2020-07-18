@@ -182,3 +182,19 @@ select, input, textarea {
   color: #444;
   font: 99% sans-serif;
 }
+
+h2 {
+  color: #222222;
+  font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 40px;
+  padding: 10px 0 10px;
+}
+button, .sub_but {
+  width: auto;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
