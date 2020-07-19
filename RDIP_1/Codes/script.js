@@ -102,3 +102,8 @@ function reset(){
   document.getElementById("cont").style = "display: none";
   document.getElementById("result").innerHTML = "";
 }
+
+var Snowball = require('snowball');
+var stemmer = new Snowball('English');
+
+
