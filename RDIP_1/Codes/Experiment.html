@@ -61,8 +61,8 @@
             <option class="opt" value="1">Corpus 1</option>
             <option class="opt" value="2">Corpus 2</option>
             <option class="opt" value="3">Corpus 3</option>
-          </select><br><br>
-          <p class="corpus" id="corpData"></p><br>
+          </select><br>
+          <p class="corpus" id="corpData"></p>
           <div id="disp1" style="display: none;">
             <p class="corpus">Enter the number of tokens and types for the above corpus:</p>
             <table cellspacing="0" cellpadding="4" style="text-align: center; margin-left: auto; margin-right: auto;">
@@ -86,20 +86,17 @@
             Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.
             <br><br>
             #new types: <br>
-            <input type="text" id="rootInp" size="4">
+            <input type="text" size="4" id="finalUserVal">
             <br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="finalCheck()">
             </form>
             <br>
-            <div id="result2"></div>
+            <h2 id="result2" style="display: none;"></h2>
           </div>
-          <button onclick="trayy()">Display unique</button>
         </div>
       </div>
     </div>
-    <script data-main="script" src="../Libraries/require.js">
-
-    </script>
+    <script data-main="script" src="../Libraries/require.js"></script>
 </body>
 
 </html>

@@ -76,7 +76,7 @@ Arial, sans-serif;
   width: 964px;
   margin: 0 auto;
   text-align: center;
-  height: 900px;
+  height: 690px;
 }
 nav#expNav ul li {
   float: left;
@@ -184,7 +184,6 @@ select, input, textarea {
 }
 
 h2 {
-  color: #222222;
   font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
   font-size: 20px;
   font-weight: 300;

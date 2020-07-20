@@ -25,11 +25,10 @@ var userType;
 var flag1 = 0;
 var rootVal = 0;
 var rootArr = [];
+rootValNum = 0;
 
 function start(value) {
   reset();
-  document.getElementById("corpData").innerHTML = "";
-  document.getElementById("disp1").style = "display: block";
   selected = document.getElementById("corpus").value;
   switch (selected) {
     case "1":
@@ -101,6 +100,7 @@ function cont() {
   document.getElementById("sub_but").style = "display: none";
   document.getElementById("result").style = "display: none";
   document.getElementById("cont").style = "display: none";
+  calculateRoot();
 }
 function reset() {
   document.getElementById("continueDiv").style = "display: none";
@@ -110,10 +110,18 @@ function reset() {
   document.getElementById("typesInp").style = "background-color: white";
   document.getElementById("cont").style = "display: none";
   document.getElementById("result").innerHTML = "";
+  document.getElementById("corpData").innerHTML = "";
+  document.getElementById("disp1").style = "display: block";
+  document.getElementById("sub_but").style = "display: block";
+  document.getElementById("result2").innerHTML = "";
+  document.getElementById("result2").style = "display: none";
+  document.getElementById("finalUserVal").style = "background-color: white";
+  rootValNum = 0;
+  rootVal = 0;
+  rootArr = [];
 }
 
-function trayy() {
-  data = corp1; //Change copr1 to view others
+function calculateRoot() {
   data = data.replace(/[^a-zA-Z ]/g, "");
   for (i = 0; i < 10; i++) {
     data = data.replace("grew", "grow");
@@ -146,7 +154,6 @@ function trayy() {
     data = data.replace("lhetl", "little");
     data = data.replace("bhes", "bit");
     data = data.replace("pleat", "plate");
-    data = data.replace("hes", "he");
   }
   data = data.toLowerCase();
   arr = data.split(" ");
@@ -161,6 +168,20 @@ function trayy() {
 }
 
 function dispa() {
-rootVal = [...new Set(rootArr)];
-alert(rootVal.length);
+  rootVal = [...new Set(rootArr)];
+  rootValNum = rootVal.length;
+}
+function finalCheck() {
+  var checkRoot = document.getElementById("finalUserVal").value;
+  if (rootValNum == checkRoot) {
+    document.getElementById("result2").style = "display: block";
+    document.getElementById("result2").innerHTML = "Right Answer";
+    document.getElementById("result2").style = "color: green";
+    document.getElementById("finalUserVal").style = "background-color: green";
+  } else {
+    document.getElementById("result2").style = "display: block";
+    document.getElementById("result2").innerHTML = "Wrong Answer";
+    document.getElementById("result2").style = "color: red";
+    document.getElementByTa("finalUserVal").style = "background-color: red";
+  }
 }
