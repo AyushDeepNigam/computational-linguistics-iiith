@@ -23,6 +23,8 @@ var data;
 var userToken;
 var userType;
 var flag1 = 0;
+var rootVal = 0;
+var rootArr = [];
 
 function start(value) {
   reset();
@@ -110,7 +112,6 @@ function reset() {
   document.getElementById("result").innerHTML = "";
 }
 
-var rootArr = [];
 function trayy() {
   data = corp1; //Change copr1 to view others
   data = data.replace(/[^a-zA-Z ]/g, "");
@@ -160,6 +161,6 @@ function trayy() {
 }
 
 function dispa() {
-  alert(rootArr);
-  alert(rootArr.length);
+rootVal = [...new Set(rootArr)];
+alert(rootVal.length);
 }
