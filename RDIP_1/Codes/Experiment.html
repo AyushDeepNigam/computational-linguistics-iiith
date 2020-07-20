@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Virtual Labs</title>
-  <script type="text/javascript" src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="http://cl-iiith.vlabs.ac.in/images/favicon.png" type="image/icon type">
 </head>
@@ -87,16 +86,20 @@
             Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.
             <br><br>
             #new types: <br>
-                  <input type="text" id="rootInp" size="4">
-                <br><br>
-                <input type="submit" value="Submit">
-              </form>
+            <input type="text" id="rootInp" size="4">
+            <br><br>
+            <input type="submit" value="Submit">
+            </form>
             <br>
             <div id="result2"></div>
           </div>
+          <button onclick="trayy()">Display unique</button>
         </div>
       </div>
     </div>
+    <script data-main="script" src="../Libraries/require.js">
+
+    </script>
 </body>
 
 </html>
