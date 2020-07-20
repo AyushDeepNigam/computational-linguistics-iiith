@@ -182,6 +182,6 @@ function finalCheck() {
     document.getElementById("result2").style = "display: block";
     document.getElementById("result2").innerHTML = "Wrong Answer";
     document.getElementById("result2").style = "color: red";
-    document.getElementByTa("finalUserVal").style = "background-color: red";
+    document.getElementById("finalUserVal").style = "background-color: red";
   }
 }
