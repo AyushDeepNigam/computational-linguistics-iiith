@@ -1,0 +1,8 @@
+List of functionalities:
+- dropdown (select language)
+- dropdown (select sentences)
+- a table is created upon selection 
+- first column: words (lexicon) | second coulumn: dropdown for various POS | third and fourth columns are empty
+- on submit, the result is displayed in third column
+- if all POS are not correct a get answers button is displayed
+- get answers displays the correct POS, and get answers is replaced by hide answers
