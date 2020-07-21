@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Virtual Labs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="http://cl-iiith.vlabs.ac.in/images/favicon.png" type="image/icon type">
+</head>
+
+<body>
+  <img class="logo" src="http://cl-iiith.vlabs.ac.in/images/logo.jpg">
+  <div class="headingB">
+    <div class="heading" id="expHead">
+      <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a>
+    </div>
+    <div id="expnav"><a href="http://cl-iiith.vlabs.ac.in/index.html">Home</a> &gt;
+      <a href="http://cl-iiith.vlabs.ac.in/index.html">Computational Linguistics Lab</a> &gt; <a href="Experiment.html">
+        Coarse - grained POS Tagging</a>
+    </div>
+    <div class="forSen">Coarse - grained POS Tagging<br>
+      <div class="centerContent">
+        <nav class="default" id="expNav">
+          <ul id="expNav-menu">
+            <li> <a href="#" id="experiment-article-section-1-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/introduction.jpg">
+                <br>
+                Introduction
+              </a></li>
+            <li> <a href="#" id="experiment-article-section-2-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/theory.jpg">
+                <br>
+                Theory
+              </a></li>
+            <li> <a href="#" id="experiment-article-section-3-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/objective.jpg">
+                <br>
+                Objective
+              </a></li>
+            <li> <a href="#" id="experiment-article-section-4-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/simulation.jpg">
+                <br>
+                Experiment
+              </a></li>
+            <li> <a href="#" id="http://cl-iiith.vlabs.ac.in/exp2/index.html#">
+                <img src="http://cl-iiith.vlabs.ac.in/images/quizzes.jpg">
+                <br>
+                Quizzes
+              </a></li>
+              <li> <a href="#" id="experiment-article-section-6-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/procedure.jpg">
+                <br>
+                Procedure
+              </a></li>
+              <li> <a href="#" id="experiment-article-section-6-menu">
+                <img src="http://cl-iiith.vlabs.ac.in/images/readings.jpg">
+                <br>
+                Further Readings
+              </a></li>
+          </ul>
+        </nav><br><br><br>
+        <p class="title">Experiment</p>
+        <div class="centerExp"><br>
+          <select id="lang" autocomplete="off" onchange="start_lang(this.value);">
+            <option class="opt" value="null">---Select a language---</option>
+            <option class="opt" value="1">English</option>
+            <option class="opt" value="2">Hindi</option>
+          </select><br><br>
+          <select id="engSen" autocomplete="off" onchange="sentence(this.value);">
+            <option class="opt" value="null">---Select a sentence---</option>
+            <option class="opt" value="0">The child liked the chocolate.</option>
+            <option class="opt" value="1">She was stopped by the bravest knight.</option>
+            <option class="opt" value="2">Mary baked a cake for his birthday.</option>
+            <option class="opt" value="3">She decorated the cake carefully.</option>
+            <option class="opt" value="4">Mary wore a dress with polka dots.</option>
+          </select>
+          <select id="hinSen" autocomplete="off" onchange="sentence(this.value);">
+            <option class="opt" value="null">---Select a sentence---</option>
+            <option class="opt" value="0">राम ने सीता के लिए फल तोड़ा।</option>
+            <option class="opt" value="1">छोटे बच्चे पाठशाला जल्दी आयेंगे।</option>
+            <option class="opt" value="2">मेहनत का फल मीठा होता है।</option>
+            <option class="opt" value="3">वाह! वह खूबसूरत है।</option>
+            <option class="opt" value="4">पेड़ से पत्ते गिर गए।</option>
+          </select><br>
+        </div>
+      </div>
+    </div>
+    <script data-main="script" src="../Libraries/require.js"></script>
+</body>
+
+</html>

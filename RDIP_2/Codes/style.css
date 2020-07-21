@@ -1,0 +1,210 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
+    Arial, sans-serif;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0;
+  background: #012943;
+}
+#expHead {
+  height: 35px;
+  background-color: #0e91e2;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+#expHead a:link,
+#expHead a:visited {
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 25px 0;
+}
+#expHead a:focus,
+#expHead a:hover {
+  color: #fff;
+  background-color: #02568e;
+}
+.headingB {
+  margin: 0 auto;
+  margin-top: 3px;
+  background-color: #d7e7f0;
+  width: 1024px;
+  height: 50px;
+}
+#expnav {
+  line-height: 0;
+  padding: 15px 0;
+  letter-spacing: 0;
+  position: relative;
+  margin: 12px auto auto auto;
+  width: 1000px;
+  font-size: 16px;
+  color: white;
+}
+#expnav a:link,
+#expnav a:visited {
+  text-decoration: none;
+  position: relative;
+  color: #fefefe;
+}
+.forSen {
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, Serif;
+  font-weight: 400;
+  text-transform: none;
+  color: #3d414c;
+  padding: 10px 30px;
+  width: 964px;
+  background-color: #e3f2fc;
+}
+.centerContent {
+  width: 980px;
+  background-color: #fff;
+  box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff, 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 15px -4px rgba(0, 0, 0, 0.2);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
+Arial, sans-serif;
+  font-size: 16px;
+  margin: -8px;
+  margin-top: 22px;
+}
+.centerExp {
+  width: 964px;
+  margin: 0 auto;
+  text-align: center;
+  height: 690px;
+}
+nav#expNav ul li {
+  float: left;
+  list-style: none;
+  margin-right: 0.3em;
+}
+nav#expNav ul li a:link,
+nav#expNav ul li a:visited {
+  color: #02568e;
+  margin-top: -10px;
+  text-decoration: underline;
+  float: left;
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 120 px;
+  height: 80px;
+  padding: 9px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
+    Arial, sans-serif;
+}
+nav#expNav ul li a:focus,
+nav#expNav ul li a:hover {
+  color: #fff;
+  background-color: #02568e;
+}
+.title {
+  font-family: proxima-nova-extra-condensed-1, proxima-nova-extra-condensed-2,
+    "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    Verdana, Arial, sans-serif;
+  font-size: 24px;
+  margin-left: 20px;
+  color: black;
+}
+.msg {
+  color: #00a;
+  font-size: 16px;
+}
+
+.wordButtons {
+  text-align: center;
+  margin-right: 30px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.language {
+  font-size: 16px;
+}
+
+.reform {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.createdSentence {
+  font-size: 30px;
+}
+
+.answer1 {
+  text-align: center;
+  font-size: 30px;
+  display: none;
+  color: #ff0000;
+}
+.answer2 {
+  text-align: center;
+  font-size: 30px;
+  display: none;
+  color: #008600;
+}
+
+.opt{
+  font-size: 16px;
+  color: #000000d5;
+}
+
+#corpus{
+  font-size: 16px;
+  color: #000000d5;
+}
+
+#corpData{
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+table tbody td {
+  padding: 10px;
+  border: 1px solid #b2bbc0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+select, input, textarea {
+  color: #444;
+  font: 99% sans-serif;
+}
+
+h2 {
+  font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 40px;
+  padding: 10px 0 10px;
+}
+button, .sub_but {
+  width: auto;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#engSen, #hinSen{
+  display: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
