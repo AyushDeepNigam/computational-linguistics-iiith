@@ -170,12 +170,22 @@ nav#expNav ul li a:hover {
   padding-right: 20px;
 }
 
-table tbody td {
+td {
   padding: 10px;
   border: 1px solid #b2bbc0;
   max-width: 700px;
+  margin-right: auto;
+}
+
+thead{
+  color: #961b25;
+}
+
+table{
+  border-spacing: 0px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
 }
 
 select, input, textarea {
@@ -208,3 +218,13 @@ button, .sub_but {
   padding-left: 3px;
   padding-right: 3px;
 }
+/* .tableCreate{
+  text-align: left;
+  width: 50%;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #0f0f0f;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+} */

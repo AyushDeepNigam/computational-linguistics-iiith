@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Virtual Labs</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="styleCSS" rel="stylesheet" href="style.css">
   <link rel="icon" href="http://cl-iiith.vlabs.ac.in/images/favicon.png" type="image/icon type">
 </head>
 
@@ -82,7 +82,9 @@
             <option class="opt" value="3">वाह! वह खूबसूरत है।</option>
             <option class="opt" value="4">पेड़ से पत्ते गिर गए।</option>
           </select><br>
-        </div>
+          <i id="POSmsg" style="text-align:center; display: none;">Select the POS tag for corresponding words</i><br>
+          <div id="tableDiv" class="tableCreate"></div>
+        </div> 
       </div>
     </div>
     <script data-main="script" src="../Libraries/require.js"></script>
