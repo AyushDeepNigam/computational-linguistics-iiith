@@ -65,9 +65,10 @@ body {
 .centerContent {
   width: 980px;
   background-color: #fff;
-  box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff, 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 15px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff,
+    12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 15px -4px rgba(0, 0, 0, 0.2);
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana,
-Arial, sans-serif;
+    Arial, sans-serif;
   font-size: 16px;
   margin: -8px;
   margin-top: 22px;
@@ -154,17 +155,17 @@ nav#expNav ul li a:hover {
   color: #008600;
 }
 
-.opt{
+.opt {
   font-size: 16px;
   color: #000000d5;
 }
 
-#corpus{
+#corpus {
   font-size: 16px;
   color: #000000d5;
 }
 
-#corpData{
+#corpData {
   text-align: center;
   padding-left: 10px;
   padding-right: 20px;
@@ -175,32 +176,41 @@ td {
   border: 1px solid #b2bbc0;
   max-width: 700px;
   margin-right: auto;
+  margin-left: 1px;
 }
 
-thead{
+thead {
   color: #961b25;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-table{
+table {
   border-spacing: 0px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
   color: #444;
   font: 99% sans-serif;
 }
 
 h2 {
-  font-family: "proxima-nova-extra-condensed-1", "proxima-nova-extra-condensed-2", "Trebuchet MS","Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Verdana, Arial,sans-serif;
+  font-family: "proxima-nova-extra-condensed-1",
+    "proxima-nova-extra-condensed-2", "Trebuchet MS", "Lucida Grande",
+    "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
   margin-left: 40px;
   padding: 10px 0 10px;
 }
-button, .sub_but {
+button,
+.sub_but {
   width: auto;
   overflow: visible;
   margin-left: auto;
@@ -208,7 +218,8 @@ button, .sub_but {
   text-align: center;
 }
 
-#engSen, #hinSen{
+#engSen,
+#hinSen {
   display: none;
   text-align: center;
   margin-left: auto;
@@ -218,13 +229,13 @@ button, .sub_but {
   padding-left: 3px;
   padding-right: 3px;
 }
-/* .tableCreate{
+.tableCreate {
   text-align: left;
   width: 50%;
   height: 500px;
   padding: 10px;
-  border: 1px solid #0f0f0f;
+  /* border: 1px solid #0f0f0f; */
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-} */
+}
