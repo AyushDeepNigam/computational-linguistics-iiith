@@ -1,3 +1,11 @@
+require.config({
+  paths: {
+    POSpeech: "../Libraries/node_modules/pos/test/tagger.js"
+  }
+});
+
+require(["POSpeech"]);
+
 //----------CORPUS----------//
 
 var engCorp = [
