@@ -232,10 +232,17 @@ button,
 .tableCreate {
   text-align: left;
   width: 50%;
-  height: 500px;
+  /* height: 500px; */
   padding: 10px;
   /* border: 1px solid #0f0f0f; */
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tableButton{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: none;
 }

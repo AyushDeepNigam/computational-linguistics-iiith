@@ -26,6 +26,7 @@ var newelement;
 //--------------------------//
 
 function start_lang() {
+  document.getElementById("buttonCreate").style= "display: none;"
   var langUsr = document.getElementById("lang").value;
   reset();
   switch (langUsr) {
@@ -33,6 +34,7 @@ function start_lang() {
       corp = engCorp;
       document.getElementById("engSen").style = "display: block";
       document.getElementById("hinSen").style = "display: none";
+      document.getElementById("buttonCreate").style= "display: none;"
       options = [
         "Noun",
         "Pronoun ",
@@ -50,6 +52,7 @@ function start_lang() {
       corp = hinCorp;
       document.getElementById("hinSen").style = "display: block";
       document.getElementById("engSen").style = "display: none";
+      document.getElementById("buttonCreate").style= "display: none;"
       options = [
         "Noun",
         "Pronoun ",
@@ -67,6 +70,7 @@ function start_lang() {
       alert("Select Langugage");
       document.getElementById("engSen").style = "display: none";
       document.getElementById("hinSen").style = "display: none";
+      document.getElementById("buttonCreate").style= "display: none;"
       senID = "";
       break;
   }
@@ -79,7 +83,9 @@ function reset() {
   document.getElementById("hinSen").style = "display: none";
   document.getElementById("POSmsg").style = "display: none";
   document.getElementById("tableDiv").style = "display: none";
+  document.getElementById("buttonCreate").style= "display: block;"
 }
+
 
 function sentence() {
   var ind = document.getElementById(senID).value;
@@ -94,7 +100,7 @@ function sentence() {
 }
 
 function createTable() {
-  {
+  { 
     document.getElementById("tableDiv").style = "display: block";
     var tableDiv = document.getElementById("tableDiv");
     var table = document.createElement("table");
@@ -152,5 +158,6 @@ function createSelect() {
       option.text = options[j];
       selectList.appendChild(option);
     }
-  }
+  }document.getElementById("buttonCreate").style= "display: block;"
+
 }
