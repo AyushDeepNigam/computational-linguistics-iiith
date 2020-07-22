@@ -44,7 +44,7 @@ function start_lang() {
       flag = "eng";
       options = [
         "Noun",
-        "Pronoun ",
+        "Pronoun",
         "Conjunction",
         "Interjection",
         "Verb",
@@ -63,7 +63,7 @@ function start_lang() {
       flag = "hin";
       options = [
         "Noun",
-        "Pronoun ",
+        "Pronoun",
         "Conjunction",
         "Interjection",
         "Verb",
@@ -78,6 +78,7 @@ function start_lang() {
       document.getElementById("engSen").style = "display: none";
       document.getElementById("hinSen").style = "display: none";
       document.getElementById("buttonCreate").style = "display: none;";
+      document.getElementById("buttonAnswer").style = "display: none";
       senID = "";
       break;
   }
@@ -91,9 +92,11 @@ function reset() {
   document.getElementById("POSmsg").style = "display: none";
   document.getElementById("tableDiv").style = "display: none";
   document.getElementById("buttonCreate").style = "display: block;";
+  document.getElementById("buttonAnswer").style = "display: none";
 }
 
 function sentence() {
+  document.getElementById("buttonAnswer").style = "display: none";
   var ind = document.getElementById(senID).value;
   chosenLine = corp[ind];
   chosenLine = chosenLine.replace("।", "");
@@ -132,17 +135,19 @@ function createTable() {
       var cb = document.createElement("td");
       var cbImg = document.createElement("img");
       cbImg.setAttribute("id", "cb" + i);
-      var td3 = document.createElement("td");
 
-      var text2 = document.createTextNode("");
-      var text3 = document.createTextNode("");
+      // var text2 = document.createTextNode("");
+
+      var ans = document.createElement("td");
+      var answers = document.createTextNode("");
+      ans.setAttribute("id", "ans" + i);
 
       pos.appendChild(poSelect);
       cb.appendChild(cbImg);
-      td3.appendChild(text3);
+      ans.appendChild(answers);
       tr.appendChild(pos);
       tr.appendChild(cb);
-      tr.appendChild(td3);
+      tr.appendChild(ans);
 
       table.appendChild(tr);
     }
@@ -172,24 +177,10 @@ function createSelect() {
 }
 
 function checkAnswer() {
-  switch (flag) {
-    case "eng":
-      checkHindi();
-      break;
-    case "hin":
-      checkHindi();
-      break;
-    default:
-      alert("Error");
-      break;
-  }
-}
-function checkEnglish() {}
-
-function checkHindi() {
+  document.getElementById("buttonAnswer").style = "display: none";
   inputOption = [];
   ticks = [];
-  chosenLine = chosenLine.replace("राम","Noun").replace("सीता","Noun").replace("फल","Noun").replace("बच्चे","Noun").replace("पाठशाला","Noun").replace("मेहनत","Noun").replace("पेड़","Noun").replace("पत्ते","Noun").replace("ने","Postposition").replace("के","Postposition").replace("लिए","Postposition").replace("का","Postposition").replace("से","Postposition").replace("तोड़ा","Verb").replace("आयेंगे","Verb").replace("होता","Verb").replace("है","Verb").replace("गिर","Verb").replace("गए","Verb").replace("छोटे","Adjective").replace("मीठा","Adjective").replace("खूबसूरत","Adjective").replace("जल्दी","Adverb").replace("वाह!","Interjection").replace("वह","Pronoun").replace("child","Noun").replace("chocolate","Noun").replace("knight","Noun").replace("Mary","Noun").replace("cake","Noun").replace("birthday","Noun").replace("polka","Noun").replace("dots","Noun").replace("by","Postposition").replace("for","Postposition").replace("with","Postposition").replace("liked","Verb").replace("his","Determiner").replace("the","Determiner").replace("stopped","Verb").replace("baked","Verb").replace("decorated","Verb").replace("wore","Verb").replace("bravest","Adjective").replace("carefully","Adverb").replace("She","Pronoun").replace("dress","Noun");chosenArr = chosenLine.split(" ");for(i=0;i<chosenArr.length;i++){if(chosenArr[i]=="a"){chosenArr[i]="Determiner";}}
+  chosenLine = chosenLine.replace("राम","Noun").replace("सीता","Noun").replace("फल","Noun").replace("बच्चे","Noun").replace("पाठशाला","Noun").replace("मेहनत","Noun").replace("पेड़","Noun").replace("पत्ते","Noun").replace("ने","Postposition").replace("के","Postposition").replace("लिए","Postposition").replace("का","Postposition").replace("से","Postposition").replace("तोड़ा","Verb").replace("आयेंगे","Verb").replace("होता","Verb").replace("है","Verb").replace("गिर","Verb").replace("गए","Verb").replace("छोटे","Adjective").replace("मीठा","Adjective").replace("खूबसूरत","Adjective").replace("जल्दी","Adverb").replace("वाह!","Interjection").replace("वह","Pronoun").replace("She","Pronoun").replace("child","Noun").replace("chocolate","Noun").replace("knight","Noun").replace("Mary","Noun").replace("cake","Noun").replace("birthday","Noun").replace("polka","Noun").replace("dots","Noun").replace("by","Postposition").replace("for","Postposition").replace("with","Postposition").replace("liked","Verb").replace("his","Determiner").replace("The","Determiner").replace("the","Determiner").replace("was","Determiner").replace("stopped","Verb").replace("baked","Verb").replace("decorated","Verb").replace("wore","Verb").replace("bravest","Adjective").replace("carefully","Adverb").replace("dress","Noun");chosenArr = chosenLine.split(" ");for(i=0;i<chosenArr.length;i++){if(chosenArr[i]=="a"){chosenArr[i]="Determiner";}}
   // alert(chosenArr);
   for (i = 0; i < chosenArr.length; i++) {
     inputOption.push(document.getElementById("option" + i).value);
@@ -207,12 +198,25 @@ function checkHindi() {
       document.getElementById("cb" + i).style =
         "height: 25px; width: 25px; padding-left: 40px; padding-bottom: 10px; vertical-align: top;";
     } else {
+      document.getElementById("buttonAnswer").style = "display: block";
       document.getElementById("cb" + i).src = fal;
       document.getElementById("cb" + i).style =
         "height: 25px; width: 25px; padding-left: 40px; padding-bottom: 10px; vertical-align: top;";
     }
   }
+  for (i=0; i<ticks.length; i++){
+    if(ticks[i] == "f"){
+      document.getElementById("buttonAnswer").style = "display: block";
+    }
+  }
 }
+
+function GetAnswer(){
+ for(i=0;i<chosenArr.length;i++){
+   document.getElementById("ans"+i).innerHTML = chosenArr[i];
+ }
+}
+
 require.config({
   paths: {
     POSpeech: "../Libraries/node_modules/pos/POSTagger",
