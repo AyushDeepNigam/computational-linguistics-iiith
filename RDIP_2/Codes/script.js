@@ -32,6 +32,7 @@ var fal = "http://cl-iiith.vlabs.ac.in/exp7/wrong.png";
 //--------------------------//
 
 function start_lang() {
+  document.getElementById("buttonAnswer").value = "Get Answer";
   document.getElementById("buttonCreate").style = "display: none;";
   var langUsr = document.getElementById("lang").value;
   reset();
@@ -85,6 +86,7 @@ function start_lang() {
 }
 
 function reset() {
+  document.getElementById("buttonAnswer").value = "Get Answer";
   document.getElementById("engSen").value = "null";
   document.getElementById("hinSen").value = "null";
   document.getElementById("engSen").style = "display: none";
@@ -96,6 +98,7 @@ function reset() {
 }
 
 function sentence() {
+  document.getElementById("buttonAnswer").value = "Get Answer";
   document.getElementById("buttonAnswer").style = "display: none";
   var ind = document.getElementById(senID).value;
   chosenLine = corp[ind];
@@ -109,7 +112,8 @@ function sentence() {
 }
 
 function createTable() {
-  {
+  { 
+    document.getElementById("buttonAnswer").value = "Get Answer";
     document.getElementById("tableDiv").style = "display: block";
     var tableDiv = document.getElementById("tableDiv");
     var table = document.createElement("table");
@@ -174,6 +178,7 @@ function createSelect() {
     }
   }
   document.getElementById("buttonCreate").style = "display: block;";
+  document.getElementById("buttonAnswer").value = "Get Answer";
 }
 
 function checkAnswer() {
@@ -212,9 +217,20 @@ function checkAnswer() {
 }
 
 function GetAnswer(){
- for(i=0;i<chosenArr.length;i++){
-   document.getElementById("ans"+i).innerHTML = chosenArr[i];
- }
+  var buttonflag = document.getElementById("buttonAnswer").value
+  if (buttonflag == "Get Answer"){
+    for(i=0;i<chosenArr.length;i++){
+      document.getElementById("ans"+i).innerHTML = chosenArr[i];
+    }
+     document.getElementById("buttonAnswer").value = "Hide Answer";
+  }
+  else{
+    for(i=0;i<chosenArr.length;i++){
+    document.getElementById("ans"+i).innerHTML = "";
+  }
+   document.getElementById("buttonAnswer").value = "Get Answer";
+  }
+ 
 }
 
 require.config({
